@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Main Card (ONLY FIX HERE) -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="110dp"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- INSIDE LAYOUT SAME AS YOURS -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <!-- Food Image -->
+            <ImageView
+                android:id="@+id/foodimage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/wafels2"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Food Name -->
+            <TextView
+                android:id="@+id/foodname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Wafels"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/foodimage"
+                app:layout_constraintTop_toTopOf="@id/foodimage"
+                app:layout_constraintEnd_toStartOf="@id/plusbtn" />
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/foodprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Rs 150"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/foodimage"
+                app:layout_constraintTop_toBottomOf="@id/foodname" />
+
+            <!-- Add (+) -->
+            <ImageView
+                android:id="@+id/plusbtn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/outline_add_box_24"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toStartOf="@id/quantitytext"
+                app:layout_constraintTop_toTopOf="@id/foodimage"
+                app:layout_constraintBottom_toTopOf="@id/foodprice" />
+
+            <!-- Quantity -->
+            <TextView
+                android:id="@+id/quantitytext"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="@id/plusbtn"
+                app:layout_constraintBottom_toBottomOf="@id/plusbtn"
+                app:layout_constraintEnd_toStartOf="@id/minusbtn" />
+
+            <!-- Minus (-) -->
+            <ImageView
+                android:id="@+id/minusbtn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/outline_indeterminate_check_box_24"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/plusbtn"
+                app:layout_constraintBottom_toBottomOf="@id/plusbtn" />
+
+            <!-- Delete icon -->
+            <ImageView
+                android:id="@+id/deletebtn"
+                android:layout_width="34dp"
+                android:layout_height="31dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@android:drawable/ic_menu_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

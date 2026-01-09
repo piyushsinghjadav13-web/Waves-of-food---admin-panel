@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdditemActivity2">
+
+    <!-- TOP GREEN BAR -->
+    <View
+        android:id="@+id/topBrownBar"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#53E88B"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TITLE IN TOP BAR -->
+
+    <!-- SCROLLABLE CONTENT -->
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Add Item"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/topBrownBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topBrownBar"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="always"
+        app:layout_constraintTop_toBottomOf="@id/topBrownBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingBottom="32dp">
+
+            <!-- Food Name -->
+            <EditText
+                android:id="@+id/enterfoodname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="24dp"
+                android:hint="Enter Food Name"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text" />
+
+            <!-- Food Price -->
+            <EditText
+                android:id="@+id/enterfoodprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="14dp"
+                android:hint="Enter Food Price"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text" />
+
+            <!-- Select Image -->
+            <TextView
+                android:id="@+id/selectimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Select Image"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:drawableEnd="@android:drawable/ic_input_add"
+                android:gravity="center_vertical" />
+
+            <!-- Image Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:id="@+id/addimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/aaa" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Short Description -->
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Short Description"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/shortdiscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Add Here Description"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+
+            <!-- Ingredients -->
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ingredients"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Add Here Ingredients"
+                android:padding="10dp" />
+
+            <!-- Add Item Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/additembtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/roundbtn"
+                android:minHeight="52dp"
+                android:text="Add Item"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BACK BUTTON IN TOP BAR -->
+    <ImageButton
+        android:id="@+id/backbtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/outline_arrow_left_alt_24"
+        app:layout_constraintBottom_toBottomOf="@id/topBrownBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topBrownBar"
+        app:layout_constraintVertical_bias="0.645" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".Login_Activity">
+
+    <!-- ScrollView in case keyboard opens -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Center container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/food" />
+
+            <!-- Texts -->
+            <TextView
+                android:id="@+id/txtAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waves of Food"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginTop="6dp" />
+
+            <TextView
+                android:id="@+id/txtLoginTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login To Your"
+                android:textSize="18sp"
+                android:textColor="#8AB05A"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/txtAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin Dashboard"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#8AB05A"
+                android:layout_marginTop="3dp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="24dp"
+                android:drawableStart="@drawable/baseline_mail_outline_24"
+                android:hint="  E-mail"
+                android:inputType="textEmailAddress"
+                android:padding="14dp" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="14dp"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:hint="  Password"
+                android:inputType="textPassword"
+                android:padding="14dp" />
+
+            <!-- OR -->
+            <TextView
+                android:id="@+id/txtOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="18dp" />
+
+            <TextView
+                android:id="@+id/txtContinueWith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue With"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="6dp" />
+
+            <!-- Google Row -->
+            <LinearLayout
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/googleBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black"
+                    android:text="Google"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/google"
+                    app:iconGravity="start"
+                    app:iconPadding="10dp"
+                    app:iconSize="28dp"
+                    app:iconTint="@null" />
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp" />
+
+            </LinearLayout>
+
+            <!-- Login Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBtn"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#8AB05A"
+                android:minHeight="56dp"
+                android:text="LOGIN"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
+            <!-- Bottom text -->
+            <TextView
+                android:id="@+id/dontHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't Have Account?"
+                android:textColor="#8AB05A"
+                android:textSize="16sp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="30dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
